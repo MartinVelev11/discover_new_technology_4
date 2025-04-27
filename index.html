@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Retriever Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Analytics tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR-GA4-ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'YOUR-GA4-ID');
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Meet the Golden Retriever</h1>
+        <div class="image-container">
+            <img src="https://images.dog.ceo/breeds/retriever-golden/n02099601_1024.jpg" alt="Golden Retriever" class="dog-image">
+        </div>
+        <p>Golden Retrievers are known for their friendly nature and intelligence. They make excellent family pets and are one of the most popular dog breeds worldwide.</p>
+    </div>
+
+    <div id="cookie-banner" class="cookie-banner">
+        <p>This website uses cookies to ensure you get the best experience. 
+            <a href="privacy-policy.html">Learn more</a>
+        </p>
+        <button onclick="acceptCookies()">Accept</button>
+    </div>
+
+    <script>
+        function acceptCookies() {
+            document.getElementById('cookie-banner').style.display = 'none';
+            localStorage.setItem('cookiesAccepted', 'true');
+        }
+
+        window.onload = function() {
+            if (!localStorage.getItem('cookiesAccepted')) {
+                document.getElementById('cookie-banner').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html> 
